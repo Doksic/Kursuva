@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // 2. Підключення до БД (Локальна)
-const dbURL = 'mongodb+srv://admin:<Alex135lol>@cluster0.zq0zzhh.mongodb.net/?appName=Cluster0';
+const dbURL = 'mongodb+srv://admin:Alex135lol@cluster0.zq0zzhh.mongodb.net/?appName=Cluster0';
 
 mongoose.connect(dbURL)
   .then(() => console.log('✅ БАЗА ДАНИХ ПІДКЛЮЧЕНА'))
