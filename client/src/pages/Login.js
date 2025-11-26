@@ -12,7 +12,7 @@ const Login = ({ setIsAuth }) => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('https://kursuva.onrender.com/api/login', { username, password });
+            await axios.post('https://kursuva-1.onrender.com/api/login', { username, password });
             localStorage.setItem('auth', 'true');
             setIsAuth(true);
             navigate('/autopark');

@@ -10,7 +10,7 @@ const Register = () => {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('https://kursuva.onrender.com/api/register', { username, password });
+            await axios.post('https://kursuva-1.onrender.com/api/register', { username, password });
             alert('Успішно! Тепер увійдіть.');
             navigate('/login');
         } catch (error) {

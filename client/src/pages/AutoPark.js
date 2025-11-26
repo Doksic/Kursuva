@@ -20,7 +20,7 @@ const AutoPark = () => {
     // Функція отримання даних з сервера
     const fetchVehicles = async () => {
         try {
-            const res = await axios.get('https://kursuva.onrender.com/api/vehicles');
+            const res = await axios.get('https://kursuva-1.onrender.com/api/vehicles');
             setVehicles(res.data);
         } catch (error) {
             console.error('Помилка завантаження:', error);
@@ -31,7 +31,7 @@ const AutoPark = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('https://kursuva.onrender.com/api/vehicles', formData);
+            await axios.post('https://kursuva-1.onrender.com/api/vehicles', formData);
             // Очищаємо форму після успішного додавання
             setFormData({ mark: '', number: '', type: 'Вантажний', driver: '', status: 'Справний' });
             fetchVehicles(); // Оновлюємо таблицю
@@ -44,7 +44,7 @@ const AutoPark = () => {
     const handleDelete = async (id) => {
         if(window.confirm('Ви впевнені, що хочете списати цю техніку?')) {
             try {
-                await axios.delete(`https://kursuva.onrender.com/api/vehicles/${id}`);
+                await axios.delete(`https://kursuva-1.onrender.com/api/vehicles/${id}`);
                 fetchVehicles();
             } catch (error) {
                 alert('Помилка видалення');
